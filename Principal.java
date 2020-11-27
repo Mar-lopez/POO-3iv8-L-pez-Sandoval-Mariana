@@ -1,27 +1,41 @@
-/*Es es la clase principal
-se realizara
-los siguientes programas 
-edad (calculara la edad de una persona)
-figuras(se calculara el area y perimetro de: circulo, rectangulo, triangulo, cuadrado)
-telefono(calcula el costo de llamadas de telefono nacionales, internacionales y celulares)
+/*Esta es la clase principal 
+Se realizara el juego de ahorcado (con 5 oportunidades de errores)
+el juego permite hasta 2 jugadores
+
 */
-//este programa fue hecho por Lopez Sandoval Mariana 
-import java.util.Scanner;
+/*Este juego fue hecho por 
+(LOPEZ SANDOVAL MARIANA), MAR PARA LOS AMIGOS 
+*/
+//librerias
+import java.util.*; 
 public class Principal{
-    //metodo principal
-    public static void main(String[] args) {
-        char repetir;
-        //Objeto de la clase menu
-        Menu menup = new Menu();
-        //objeto del metodo Scanner
-        Scanner leer = new Scanner(System.in);
 
+   //scanner 
+   Scanner entrada = new Scanner(System.in);
+
+   //metodo principal de todo el programa 
+    public static void main(String[] args){
+       //variables
+       Scanner entrada = new Scanner(System.in);
+        int volverajugar;
+    
         do{
-            //mandamos a llamar al metodo indice
-            menup.menu();
+            Principal.indice();
+                System.out.println("Si quiere volver al menu escribe -6-");
+                volverajugar = entrada.nextInt();
+        }while (volverajugar == 6);
+      
+    }
 
-            System.out.println("Si desea repetir los programas digite 'r', de lo contraio digite 's'.");
-            repetir = leer.next().charAt(0);
-        }while(repetir != 's');
+    public static void indice(){
+        Scanner entrada = new Scanner(System.in);
+        int oh; 
+        
+     //objetos
+       Datos  People = new Datos();
+       System.out.println("IR AL REGISTRO DE DATOS ");
+       People.mostrarDatos();
+
     }
 }
+ 
